@@ -1,0 +1,9 @@
+<!-- 
+  MEGAROVER move base demo launch
+  USE STATIC MAP
+-->
+
+<launch>
+  <!-- Rviz -->
+  <node pkg="rviz" type="rviz" args="-d '$(find megarover3_ros)/configuration_files/rviz/navigation.rviz'" name="visualizer" respawn="true" />
+</launch>

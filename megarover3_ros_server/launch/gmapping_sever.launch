@@ -1,0 +1,14 @@
+<launch>
+
+  <!-- gmapping -->
+  <node pkg="gmapping" type="slam_gmapping" name="mapper">
+    <param name="maxUrange" value="32.0" type="double" />
+    <param name="delta" value="0.05" />
+    <param name="xmax" value="30" type="double" />
+    <param name="ymax" value="30" type="double" />
+    <param name="xmin" value="-30" type="double" />
+    <param name="ymin" value="-30" type="double" />
+  </node>
+
+  <node pkg="rviz" type="rviz" args="-d '$(find megarover3_ros)/configuration_files/rviz/gmapping.rviz'" name="visualizer" respawn="true" />
+</launch>
